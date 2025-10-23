@@ -1,6 +1,6 @@
-# Coin Listing Predictor - Bitpin
+# Cryptocurrency Listing Evaluation Tool
 
-A comprehensive React-based web application for predicting the financial success of cryptocurrency listings on the Bitpin exchange platform. This tool provides detailed analytics, forecasting, and strategic insights for coin listing decisions.
+A comprehensive React-based web application for predicting the financial success of cryptocurrency listings. This tool provides detailed analytics, forecasting, and strategic insights for coin listing decisions through advanced mathematical modeling.
 
 ## 📋 Table of Contents
 
@@ -18,16 +18,16 @@ A comprehensive React-based web application for predicting the financial success
 
 ## 🎯 Overview
 
-The Coin Listing Predictor is a sophisticated financial modeling tool designed specifically for Bitpin's cryptocurrency exchange operations. It helps decision-makers evaluate the potential profitability and success metrics of listing new cryptocurrencies by analyzing various market factors, user behavior patterns, and financial parameters.
+The Cryptocurrency Listing Evaluation Tool is a sophisticated financial modeling application designed for cryptocurrency exchange operations. It helps decision-makers evaluate the potential profitability and success metrics of listing new cryptocurrencies by analyzing various market factors, user behavior patterns, and financial parameters through a comprehensive mathematical framework.
 
 ### Key Capabilities
 
-- **Volume Prediction**: Forecasts trading volume for the first week after listing
-- **Revenue Analysis**: Calculates direct revenue from spread margins
+- **Volume Prediction**: Forecasts trading volume for the first week after listing using multi-factor analysis
+- **Revenue Analysis**: Calculates direct revenue from spread margins and trading fees
 - **Cost-Benefit Analysis**: Evaluates marketing and liquidity costs against projected returns
-- **ROI Calculation**: Provides return on investment metrics
-- **Risk Assessment**: Identifies potential risks and success indicators
-- **Strategic Recommendations**: Offers actionable insights for listing decisions
+- **ROI Calculation**: Provides comprehensive return on investment metrics
+- **Risk Assessment**: Identifies potential risks and success indicators through automated analysis
+- **Strategic Recommendations**: Offers data-driven insights for listing decisions
 
 ## ✨ Features
 
@@ -147,14 +147,14 @@ The Coin Listing Predictor is a sophisticated financial modeling tool designed s
 
 ### Parameter Guidelines
 
-#### User Metrics
+#### User Behavior Metrics
 - **MAU**: 10,000 - 500,000 (typical range: 100,000)
 - **Conversion Rate**: 0.5% - 10% (Layer 1: ~2.8%, GameFi: ~4.1%)
 - **Average Trade**: 1M - 20M Toman (typical: 4-5M)
 
-#### Market Factors
-- **Hype Factor**: 1.0 - 2.2 (calculated from Google Trends, Social Media, Media Coverage, Exclusivity)
-- **Liquidity Factor**: 0.80 - 1.20 (based on slippage: Lf = 1 - (Avg Slippage × 2))
+#### Market Dynamics
+- **Hype Factor**: 1.0 - 2.2 (calculated from multiple market signals)
+- **Liquidity Factor**: 0.80 - 1.20 (based on slippage analysis)
 
 #### Financial Parameters
 - **Marketing Cost**: 0 - 500M Toman
@@ -163,48 +163,55 @@ The Coin Listing Predictor is a sophisticated financial modeling tool designed s
 
 ## 🧮 Mathematical Model
 
-### Core Formula
+### Prediction Logic
 
-The application uses a sophisticated two-component volume prediction model:
+The tool employs a sophisticated two-component volume prediction model that accounts for both existing user behavior and new user acquisition:
 
 ```
 V_w1 = (MAU × C_r × A_t × H_f × L_f) + (N_u × A_tn × H_f × L_f)
 ```
 
-Where:
-- **V_w1**: Total volume for week 1
-- **MAU**: Monthly Active Users
-- **C_r**: Conversion Rate (%)
-- **A_t**: Average Trade Amount (existing users)
-- **H_f**: Hype Factor
-- **L_f**: Liquidity Factor
-- **N_u**: New Users from GTM campaigns
-- **A_tn**: Average Trade Amount (new users)
+**Model Components:**
 
-### Revenue Calculation
+- **V_w1**: Total predicted volume for week 1
+- **MAU**: Monthly Active Users (existing user base)
+- **C_r**: Conversion Rate (% of existing users who will trade the new coin)
+- **A_t**: Average Trade Amount for existing users
+- **H_f**: Hype Factor (market excitement multiplier)
+- **L_f**: Liquidity Factor (market depth and slippage impact)
+- **N_u**: New Users acquired through marketing campaigns
+- **A_tn**: Average Trade Amount for new users
 
+### Revenue and Profitability Analysis
+
+**Revenue Calculation:**
 ```
 Direct Revenue = Total Volume × Spread Margin
 Net Profit = Direct Revenue - Total Costs
 ROI = (Net Profit / Total Costs) × 100
 ```
 
-### Component Breakdown
+**Volume Component Breakdown:**
 
-1. **Existing Users Volume**
+1. **Existing Users Contribution**
    ```
    Existing Volume = MAU × (C_r/100) × A_t × H_f × L_f
    ```
+   - Represents trading volume from current active users
+   - Conversion rate varies by coin category (Layer 1: ~2.8%, GameFi: ~4.1%)
 
-2. **New Users Volume**
+2. **New Users Contribution**
    ```
    New Volume = N_u × A_tn × H_f × L_f
    ```
+   - Represents volume from newly acquired users
+   - Typically 50-70% of existing user trade amounts
 
-3. **Financial Metrics**
-   ```
-   Profit Margin = (Net Profit / Direct Revenue) × 100
-   ```
+**Key Factors Explained:**
+
+- **Hype Factor (H_f)**: Calculated from Google Trends (0.1-0.4) + Social Media (0.1-0.4) + Media Coverage (0.1-0.2) + Exclusivity (0.1-0.3)
+- **Liquidity Factor (L_f)**: Based on slippage impact, calculated as L_f = 1 - (Avg Slippage × 2)
+- **Conversion Rate**: Historical data shows different rates for various coin categories
 
 ## 📁 Project Structure
 
@@ -389,4 +396,4 @@ For questions, issues, or contributions, please refer to the project repository 
 
 **Version**: 0.1.0  
 **Last Updated**: 2024  
-**License**: Private (Bitpin Internal Use)
+**License**: Private (Internal Use)
